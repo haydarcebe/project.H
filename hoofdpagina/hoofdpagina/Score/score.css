@@ -1,3 +1,35 @@
 body{
     background: url(babyblue2.webp);
 }
+
+a{
+      color: rgb(235, 222, 222);
+   position:absolute;
+    bottom: 0;
+    right: 10px;
+text-decoration: none;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-bottom: 20px;
+             font-family:Arial, Helvetica, sans-serif;
+             opacity: 0.8;
+
+}
+.card{
+     background-color: rgb(4, 40, 245);
+    width: 50px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+a:hover{
+opacity: 1;
+}
+h1{
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    margin-right: 22px;
+}

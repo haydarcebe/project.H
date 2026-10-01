@@ -1,3 +1,66 @@
 body{
     background-image: url(babyblue.webp);
 }
+a{
+    color: rgb(235, 222, 222);
+   position:absolute;
+    bottom: 0;
+    right: 10px;
+text-decoration: none;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+      margin-bottom: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+        opacity: 0.8;
+
+}
+.card{
+    background-color: rgb(4, 40, 245);
+    width: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+a:hover{
+opacity: 1;
+
+}
+h1{
+  display: flex;
+  justify-content: center;
+  font-family:Arial, Helvetica, sans-serif; 
+}
+button{
+ position:absolute;
+    bottom: 200px;
+    right: 25%;
+    display: flex;
+    
+}
+.card1{
+background: none  ;
+font-size: 200%;
+
+
+}
+.card1:hover{
+  animation: colors 0.3s infinite;
+}
+@keyframes colors {
+  10%{color: greenyellow}
+  20%{color:darkcyan}
+  35%{color:rgb(7, 251, 255)}
+  45%{color: lawngreen}
+ 50%{color:mediumspringgreen}
+ 75%{color:crimson}
+ 85%{color:blueviolet}
+}
+img{
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  right: 27%;
+  width:45%;
+}

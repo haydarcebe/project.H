@@ -15,7 +15,7 @@ a{
     color: rgba(13, 160, 160, 0.555);
      display: flex;
      justify-content: center;
-       font-size: 32px;
+       font-size: 55px;
         font-family:Arial, Helvetica, sans-serif;
         outline-style:solid;
       outline-width: 3.5;
@@ -23,18 +23,16 @@ a{
       border-radius: 50px;
        text-align: center;
        width: 30%;  
-       margin: 60px;
-     
+       margin: 30px;
 }
  a:hover{
-    color: rgb(0, 0, 0);
-    opacity: 0.8;
- animation: ahover 1s infinite;
+    color: rgb(8, 8, 8);
+    opacity: 1;
+ animation: ahover 1.7s ease forwards;
 }
 @keyframes ahover{
-75%{font-size: 40px}
+25%{font-size: 40px}
 100%{color: rgb(247, 247, 35);}
-25%{font-size: 32px}
 25%{color:rgb(127, 255, 129)}
 }
 h1{
@@ -42,5 +40,85 @@ h1{
     color:rgb(0, 0, 0);
     font-family:Arial, Helvetica, sans-serif;
     font-size: 48px;
-    margin-right: 22px;
+
+}
+
+#uitleg{
+    font-size: 24px;
+    transform: translateY(0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background-color: aliceblue;
+}
+.verborgen{
+    opacity: 0;
+    transform: translateY(20px);
+    
+}
+#uitleg:not(.verborgen){
+    animation: blackuit 0.5s ease forwards;
+}
+@keyframes blackuit{
+    from{
+        opacity: 0;
+    transform: translateY(20px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    100%{
+        color:rgb(4, 4, 4);
+    }
+
+}
+#uitleg1{
+    font-size: 24px;
+    transform: translateY(0);
+    font-family: Arial;
+    background-color: aliceblue;
+}
+.verborgen1{
+    opacity: 0;
+    transform: translateY(20px)
+}
+#uitleg1:not(.verborgen1){
+    animation: blurin 0.5s ease forwards;
+}
+@keyframes blurin{
+    from{
+        opacity: 0;
+    transform: translateY(20px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    100%{
+        color:rgb(12, 12, 12);
+        
+    }
+
+}
+.diskspin{
+opacity: 0.3;
+    position: absolute;
+}
+.bubbbles{
+    position: absolute;
+    right: 0%;
+    opacity:0.3;
+    height: 70%;
+}
+.uitleg-mode{
+        text-align: center;
+    color:rgb(0, 0, 0);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+.arrowdown{
+    max-width: 2%;
+    position: absolute;
+    right: 49%;
+    top: 21%;
+
 }
