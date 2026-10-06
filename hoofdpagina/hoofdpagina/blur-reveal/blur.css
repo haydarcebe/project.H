@@ -1,9 +1,8 @@
 body{
     background-image: url(babyblue.webp);
 }
-
 a{
-   color: rgb(235, 222, 222);
+    color: rgb(235, 222, 222);
    position:absolute;
     bottom: 0;
     right: 10px;
@@ -11,37 +10,39 @@ text-decoration: none;
   display: flex;
     justify-content: center;
     align-items: center;
-     margin-bottom: 20px;
-             font-family:Arial, Helvetica, sans-serif;
-opacity: 0.8;
+      margin-bottom: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+        opacity: 0.8;
+
 }
 .card{
-  background-color: rgb(4, 40, 245);
+    background-color: rgb(4, 40, 245);
     width: 50px;
     padding: 20px;
     border-radius: 10px;
-
+    
 }
+
 a:hover{
 opacity: 1;
-}
 
+}
 h1{
   display: flex;
   justify-content: center;
-  font-family:Arial, Helvetica, sans-serif;
-
+  font-family:Arial, Helvetica, sans-serif; 
 }
 button{
  position:absolute;
     bottom: 200px;
     right: 25%;
     display: flex;
+    max-width: 100%;
+    
 }
 .card1{
 background: none  ;
-font-size: 200%;
-
+font-size: 2.2rem;
 }
 .card1:hover{
   animation: colors 0.3s infinite;
@@ -60,5 +61,45 @@ img{
   justify-content: center;
   position: absolute;
   right: 27%;
-  width:45%;
+max-width: 100%;
+width: 45%;
+}
+.hide{
+  display: none;
+}
+.antwoord1{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 80%;
+  right: 50%;
+  font-size: 4rem;
+  background: none;
+}
+.antwoord2{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 50%;
+  right: 50%;
+  font-size: 4rem;
+  background: none;
+}
+.antwoord3{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 20%;
+  right: 50%; 
+  font-size: 4rem;
+  background: none;
+}
+.antwoord1:hover{
+animation: changingnow 0.9s infinite;
+}
+@keyframes changingnow{
+ 50%{color:aqua}
+}
+.antwoord2:hover{
+animation: changingnow 0.9s infinite;
+}
+.antwoord3:hover{
+animation: changingnow 0.9s infinite;
 }

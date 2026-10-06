@@ -64,3 +64,42 @@ img{
   right: 27%;
   width:45%;
 }
+.hide{
+  display: none;
+}
+.antwoord1{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 80%;
+  right: 50%;
+  font-size: 4rem;
+  background: none;
+}
+.antwoord2{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 50%;
+  right: 50%;
+  font-size: 4rem;
+  background: none;
+}
+.antwoord3{ 
+  position: absolute;
+  max-width: 100%;
+  bottom: 20%;
+  right: 50%; 
+  font-size: 4rem;
+  background: none;
+}
+.antwoord1:hover{
+animation: changingnow 0.9s infinite;
+}
+@keyframes changingnow{
+ 50%{color:aqua}
+}
+.antwoord2:hover{
+animation: changingnow 0.9s infinite;
+}
+.antwoord3:hover{
+animation: changingnow 0.9s infinite;
+}
