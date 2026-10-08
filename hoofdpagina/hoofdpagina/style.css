@@ -106,18 +106,8 @@ opacity: 0.2;
     width: 60%;
     right: 72%;
     bottom: -7%;
-
+ mix-blend-mode: darken;
 }
-.bubbbles{
-    position: absolute;
-    left: 68%;
-    opacity:0.3;
-    height: 70%;
-   
-}
-
-
-
 .uitleg-mode{
         text-align: center;
     color:rgb(0, 0, 0);
@@ -126,22 +116,14 @@ opacity: 0.2;
 }
 .arrowdown{
     width: 2%;
-    position: absolute;
+    position: fixed;
     right: 49%;
     top: 21%;
-
-
+    object-fit: cover;
 }
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
     .diskspin{
-display: none;
-    }
-    .bubbbles{
-        display:none;
-    }
-    .arrowdown{
-        display: none;
-    }
+display: none;}
 }
 .tw{
     font-size: 2rem;
@@ -149,4 +131,7 @@ display: none;
      opacity: 0.7;
      background-color: aliceblue;
     max-width: 25%;
+}
+.diskspin:hover{
+    opacity: 0.4;
 }
