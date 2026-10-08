@@ -33,7 +33,7 @@ a{
 }
 @keyframes ahover{
 25%{font-size: 3.6rem}
-100%{color: rgb(247, 247, 35);}
+100%{color: rgb(247, 247, 35)}
 25%{color:rgb(127, 255, 129)}
 }
 h1{
@@ -102,7 +102,7 @@ h1{
 }
 .diskspin{
 opacity: 0.2;
-    position:absolute;
+    position:fixed;
     width: 60%;
     right: 72%;
     bottom: -7%;
@@ -115,11 +115,11 @@ opacity: 0.2;
     font-size: 1.4rem;
 }
 .arrowdown{
-    width: 2%;
-    position: fixed;
-    right: 49%;
-    top: 21%;
-    object-fit: cover;
+    width: 30px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 165px; 
 }
 @media screen and (max-width: 1100px) {
     .diskspin{
@@ -134,4 +134,21 @@ display: none;}
 }
 .diskspin:hover{
     opacity: 0.4;
+}
+.bluring:hover{
+    animation: bluring 1.6s ease forwards;
+}
+@keyframes bluring{
+    25%{font-size: 3.6rem}
+100%{color: rgb(247, 247, 35)}
+25%{filter: blur(6px)}
+}
+.blackstuff:hover{
+    animation: blackstuff 1.6s ease forwards;
+}
+@keyframes blackstuff{
+    25%{font-size: 3.6rem}
+100%{color: rgb(247, 247, 35)}
+50%{color:aqua}
+25%{background-color: black;}
 }

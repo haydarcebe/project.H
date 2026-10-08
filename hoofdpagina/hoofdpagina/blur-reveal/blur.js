@@ -15,15 +15,15 @@ const C= document.querySelector('#antwoordC')
 
 A.addEventListener('click',() => {
 geven.classList.add('hide')
-changetitle.innerHTML = 'SCORE'
+changetitle.innerHTML = 'EINDRESULTAAT'
 })
 B.addEventListener('click',() => {
 geven.classList.add('hide')
-changetitle.innerHTML = 'SCORE'
+changetitle.innerHTML = 'EINDRESULTAAT'
 })
 C.addEventListener('click',() => {
 geven.classList.add('hide')
-changetitle.innerHTML = 'SCORE'
+changetitle.innerHTML = 'EINDRESULTAAT'
 })
 
 
