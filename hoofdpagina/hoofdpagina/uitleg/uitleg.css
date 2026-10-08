@@ -2,33 +2,44 @@ body{
     background-image: url(babyblue.webp);
 }
 
-a{
-    color: rgb(235, 222, 222);
-   position:absolute;
-    bottom: 0;
-    right: 10px;
-text-decoration: none;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-     margin-bottom: 20px;
-      font-family:Arial, Helvetica, sans-serif;
-      opacity: 0.8;
-    }
-.card{
-     background-color: rgb(4, 40, 245);
-    width: 50px;
-    padding: 20px;
-    border-radius: 10px;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px 80px;
+}
 
-}
-a:hover{
-opacity: 1;
-}
-h1{
+h1 {
     text-align: center;
-    color:rgb(0, 0, 0);
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 48px;
-    margin-right: 22px;
+    margin-bottom: 20px;
+}
+
+.intro, .info-card, .steps {
+    background: rgba(255,255,255,0.8);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #0d2d65;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        position: static;
+        display: inline-block;
+        margin: 20px;
+    }
 }
