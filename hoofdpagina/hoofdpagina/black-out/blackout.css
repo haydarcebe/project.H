@@ -104,10 +104,3 @@ animation: changingnow 0.9s infinite;
 .antwoord3:hover{
 animation: changingnow 0.9s infinite;
 }
-.laptop{ 
-  mix-blend-mode: darken;
-  width: 10%;
-}
-#laptop{
-  display:none; 
-}
