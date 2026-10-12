@@ -23,6 +23,17 @@ text-decoration: none;
     
 }
 
+.home-link{
+  position: fixed;
+  left: 20px;
+  right: auto;
+  bottom: 20px;
+  width: auto;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: rgb(4, 40, 245);
+}
+
 a:hover{
 opacity: 1;
 
@@ -111,14 +122,19 @@ animation: changingnow 0.9s infinite;
 max-width: 100%;
 width: 45%;
 top: 22%;
-animation: blurfroggy 3.5s ease forwards;
+filter: blur(10px);
 }
-@keyframes blurfroggy{ 
-  0%{filter: blur(10px)}
-  1%{filter: blur(10px)}
-  10%{filter: blur(10px)}
-  25%{filter: blur(10px)}
-  50%{filter: blur(10px)}
+.frogblur.revealing {
+  animation: blurfroggy 5s ease forwards;
+}
+@keyframes blurfroggy {
+  0% { filter: blur(10px); }
+  1% { filter: blur(10px); }
+  10% { filter: blur(10px); }
+  25% { filter: blur(10px); }
+  50% { filter: blur(10px); }
+  100% { filter: blur(0); }
+}
 }
 .hidingfroggy{
   display: none
