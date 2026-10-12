@@ -28,4 +28,4 @@ C.addEventListener('click',() => {
 geven.classList.add('hide')
 changetitle.innerHTML = 'EINDRESULTAAT'
 })
-
+ 
