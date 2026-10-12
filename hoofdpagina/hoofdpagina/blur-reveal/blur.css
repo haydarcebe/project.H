@@ -103,3 +103,22 @@ animation: changingnow 0.9s infinite;
 .antwoord3:hover{
 animation: changingnow 0.9s infinite;
 }
+.frogblur{
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  right: 27%;
+max-width: 100%;
+width: 45%;
+top: 22%;
+animation: blurfroggy 5s ease forwards;
+}
+@keyframes blurfroggy{ 
+  0%{filter: blur(10px)}
+  1%{filter: blur(10px)}
+  10%{filter: blur(10px)}
+  50%{filter: blur(10px)}
+}
+.hidingfroggy{
+  display: none
+}
