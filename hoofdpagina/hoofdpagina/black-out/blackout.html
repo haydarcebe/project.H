@@ -8,19 +8,22 @@
 </head>
 <body>
     <h1 id="titlechange">BLACK-OUT</h1>
-<img id='oldinterface' src="oldinterface.png">
-<button class="card1" id="Ready">READY!!!</button>
-<p id="question-counter" aria-live="polite"></p>
-<h2 id="question-text"></h2>
-<div id='geefantwoorden'class="hide">
-<button id="antwoordA" class="antwoord1"></button>
-<button id='antwoordB'class="antwoord2"></button>
-<button id="antwoordC" class="antwoord3"></button>
-</div>
-<p id="round-result" aria-live="polite"></p>
-
-    <a id="home-link" class="home-link hide" href="../index.html">Return to Home</a>
-    <a class='card' href="../index.html">Return</a>
+    <main class="game">
+        <img id="oldinterface" src="oldinterface.png" alt="The picture used for the Black-Out quiz">
+        <button id="Ready">READY!!!</button>
+        <p id="question-counter" aria-live="polite"></p>
+        <h2 id="question-text"></h2>
+        <div id="geefantwoorden" class="hide">
+            <button id="antwoordA" class="answer"></button>
+            <button id="antwoordB" class="answer"></button>
+            <button id="antwoordC" class="answer"></button>
+        </div>
+        <p id="round-result" aria-live="polite"></p>
+    </main>
+    <nav class="page-links" aria-label="Page navigation">
+        <a id="home-link" class="hide" href="../index.html">Return to Home</a>
+        <a href="../index.html">Return</a>
+    </nav>
     <script src="../Score/score.js"></script>
     <script src="blackout.js"></script>
 </body>

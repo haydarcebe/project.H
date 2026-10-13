@@ -1,8 +1,16 @@
 const scoreStorageKey = 'guessingGameScores'
+const maxSavedScores = 10
 
 function getScores() {
     const savedScores = localStorage.getItem(scoreStorageKey)
-    return savedScores ? JSON.parse(savedScores) : []
+    const scores = savedScores ? JSON.parse(savedScores) : []
+    const recentScores = scores.slice(-maxSavedScores)
+
+    if (recentScores.length !== scores.length) {
+        localStorage.setItem(scoreStorageKey, JSON.stringify(recentScores))
+    }
+
+    return recentScores
 }
 
 function saveScore(mode, correct, startedAt, questionNumber) {
@@ -17,7 +25,7 @@ function saveScore(mode, correct, startedAt, questionNumber) {
         correct,
         playedAt: new Date().toLocaleString()
     })
-    localStorage.setItem(scoreStorageKey, JSON.stringify(scores))
+    localStorage.setItem(scoreStorageKey, JSON.stringify(scores.slice(-maxSavedScores)))
 
     return points
 }
