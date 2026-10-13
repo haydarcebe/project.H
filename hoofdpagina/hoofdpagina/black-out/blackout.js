@@ -42,10 +42,22 @@ function showQuestion() {
 }
 
 ready.addEventListener('click', () => {
-    image.remove()
-    ready.remove()
-    answers.classList.remove('hide')
-    showQuestion()
+    const buttonBounds = ready.getBoundingClientRect()
+    const startRound = () => {
+        image.remove()
+        ready.remove()
+        answers.classList.remove('hide')
+        showQuestion()
+    }
+
+    explosion.style.left = `${buttonBounds.left + buttonBounds.width / 2}px`
+    explosion.style.top = `${buttonBounds.top + buttonBounds.height / 2}px`
+    ready.disabled = true
+    explosion.addEventListener('animationend', () => {
+        explosion.classList.remove('playing')
+        startRound()
+    }, { once: true })
+    explosion.classList.add('playing')
 })
 
 answerButtons.forEach((button, index) => {

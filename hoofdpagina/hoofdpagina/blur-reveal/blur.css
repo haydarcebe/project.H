@@ -78,6 +78,25 @@ width: 45%;
 .hide{
   display: none;
 }
+.explosion{
+  display: none;
+  position: fixed;
+  z-index: 20;
+  width: min(220px, 60vw);
+  aspect-ratio: 220 / 314;
+  transform: translate(-50%, -50%);
+  background-image: url("../explosion.png");
+  background-size: 1700% 100%;
+  background-position: 0 0;
+  pointer-events: none;
+}
+.explosion.playing{
+  display: block;
+  animation: explosion-frames 1.7s steps(16, end) forwards;
+}
+@keyframes explosion-frames{
+  to{background-position: 100% 0}
+}
 .antwoord1{ 
   position: absolute;
   max-width: 100%;

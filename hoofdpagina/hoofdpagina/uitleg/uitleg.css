@@ -36,6 +36,25 @@ h1 {
     border-radius: 10px;
 }
 
+.blackstuff:hover {
+    animation: blackstuff 1.6s ease forwards;
+}
+
+@keyframes blackstuff {
+    25% { font-size: 1.5rem; background-color: black; }
+    50% { color: aqua; }
+    100% { color: rgb(247, 247, 35); }
+}
+
+.bluring:hover {
+    animation: bluring 1.6s ease forwards;
+}
+
+@keyframes bluring {
+    25% { font-size: 1.5rem; filter: blur(6px); }
+    100% { color: rgb(247, 247, 35); }
+}
+
 @media (max-width: 600px) {
     .card {
         position: static;
