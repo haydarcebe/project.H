@@ -42,7 +42,7 @@ function showQuestion() {
 }
 
 ready.addEventListener('click', () => {
-    image.remove()
+       image.remove()
     ready.remove()
     answers.classList.remove('hide')
     showQuestion()
