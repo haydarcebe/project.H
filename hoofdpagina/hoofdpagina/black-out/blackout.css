@@ -149,6 +149,22 @@ img{
   display: block;
   animation: explosion-frames 1.7s steps(16, end) forwards;
 }
+#final-celebration{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  width: min(220px, 55vw);
+  height: min(220px, 55vw);
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  pointer-events: none;
+}
+#final-celebration.visible{
+  display: block;
+}
 @keyframes explosion-frames{
   to{background-position: 100% 0}
 }

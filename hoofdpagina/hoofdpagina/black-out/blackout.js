@@ -1,4 +1,5 @@
 const ready = document.querySelector('#Ready')
+const explosion = document.getElementById('explosion')
 const image = document.getElementById('oldinterface')
 const answers = document.querySelector('#geefantwoorden')
 const title = document.querySelector('#titlechange')
@@ -6,6 +7,7 @@ const result = document.querySelector('#round-result')
 const questionCounter = document.querySelector('#question-counter')
 const questionText = document.querySelector('#question-text')
 const homeLink = document.querySelector('#home-link')
+const celebration = document.getElementById('final-celebration')
 const answerButtons = answers.querySelectorAll('button')
 const questions = [
     {
@@ -42,10 +44,18 @@ function showQuestion() {
 }
 
 ready.addEventListener('click', () => {
-       image.remove()
-    ready.remove()
-    answers.classList.remove('hide')
-    showQuestion()
+    const buttonBounds = ready.getBoundingClientRect()
+    explosion.style.left = `${buttonBounds.left + buttonBounds.width / 2}px`
+    explosion.style.top = `${buttonBounds.top + buttonBounds.height / 2}px`
+    ready.disabled = true
+    explosion.addEventListener('animationend', () => {
+        explosion.classList.remove('playing')
+        image.remove()
+        ready.remove()
+        answers.classList.remove('hide')
+        showQuestion()
+    }, { once: true })
+    explosion.classList.add('playing')
 })
 answerButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -70,6 +80,8 @@ answerButtons.forEach((button, index) => {
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
                 homeLink.classList.remove('hide')
+                celebration.src = '../zyzz.gif'
+                celebration.classList.add('visible')
             }
         }, 800)
     })
