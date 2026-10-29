@@ -76,7 +76,7 @@ answerButtons.forEach((button, index) => {
                 showQuestion()
             } else {
                 answers.classList.add('hide')
-                title.textContent = 'FINAL SCORE'
+                title.textContent = 'FINAL SCORE OF BLACK-OUT'
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
                 homeLink.classList.remove('hide')

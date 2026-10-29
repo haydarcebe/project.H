@@ -95,7 +95,6 @@ C.addEventListener('click', () => {
     antwoordis.style.color = 'red'
     scoreyg.innerHTML = 'score: 0'
 })
-})
 
 answerButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -116,7 +115,7 @@ answerButtons.forEach((button, index) => {
                 showQuestion()
             } else {
                 answers.classList.add('hide')
-                title.textContent = 'FINAL SCORE'
+                title.textContent = 'FINAL SCORE OF BLUR-IN'
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
                 homeLink.classList.remove('hide')
