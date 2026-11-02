@@ -1,6 +1,8 @@
 const ready = document.querySelector('#Ready')
 const explosion = document.getElementById('explosion')
 const image = document.getElementById('oldinterface')
+const frog = document.querySelector('#frog')
+const cat = document.querySelector('#cat')
 const answers = document.querySelector('#geefantwoorden')
 const title = document.querySelector('#titlechange')
 const result = document.querySelector('#round-result')
@@ -12,7 +14,7 @@ const answerButtons = answers.querySelectorAll('button')
 const questions = [
     {
         question: 'What is shown in the picture?',
-        answers: ['A: Blank browser window', 'B: Froggy with a cookie', 'C: Green ball'],
+        answers: ['A: Blank browser window', 'B: Grey background ', 'C: Green ball'],
         correctAnswer: 0
     },
     {
@@ -24,7 +26,17 @@ const questions = [
         question: 'What color is the top title bar?',
         answers: ['A: Red', 'B: Green', 'C: Blue'],
         correctAnswer: 2
-    }
+    },
+    {
+        question: 'Wat is te zien aan het rechter kant?',
+        answers: ['A: Dragon', 'B: Cat', 'C: Grijze tapijt'],
+        correctAnswer: 1   
+    },
+   {question: 'Wat is te zien aan het linker kant?',
+   answers: ['A: frog', 'B: Nature', 'C: Green wallpaper '],
+correctAnswer: 0
+   }
+
 ]
 let questionIndex = 0
 let startedAt
@@ -52,6 +64,8 @@ ready.addEventListener('click', () => {
         explosion.classList.remove('playing')
         image.remove()
         ready.remove()
+        cat.remove()
+        frog.remove()
         answers.classList.remove('hide')
         showQuestion()
     }, { once: true })
