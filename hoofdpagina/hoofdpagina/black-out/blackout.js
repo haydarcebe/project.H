@@ -28,13 +28,13 @@ const questions = [
         correctAnswer: 2
     },
     {
-        question: 'wat is het juiste Foto?',
+        question: 'Wat is te zien aan het rechter kant?',
         answers: ['A: Dragon', 'B: Cat', 'C: Grijze tapijt'],
         correctAnswer: 1   
     },
-   {question: 'Wat was het laatste foto?',
+   {question: 'Wat is te zien aan het linker kant?',
    answers: ['A: frog', 'B: Nature', 'C: Green wallpaper '],
-correctAnswer: 1
+correctAnswer: 0
    }
 
 ]

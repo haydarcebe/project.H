@@ -25,6 +25,11 @@ const questions = [
         question: 'What color is the frog?',
         answers: ['A: Green', 'B: Blue', 'C: Orange'],
         correctAnswer: 0
+    },
+    {
+    question: 'What is to be seen behind the frog?',
+    answers: ['A: Nature' , 'B: green city' ,'C:greenscreen'],
+    correctAnswer: 0
     }
 ]
 let questionIndex = 0
@@ -95,7 +100,7 @@ C.addEventListener('click', () => {
     antwoordis.style.color = 'red'
     scoreyg.innerHTML = 'score: 0'
 })
-})
+
 
 answerButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -115,6 +120,7 @@ answerButtons.forEach((button, index) => {
             if (questionIndex < questions.length) {
                 showQuestion()
             } else {
+                frog.classList.add('hidingfroggy')
                 answers.classList.add('hide')
                 title.textContent = 'FINAL SCORE'
                 questionCounter.textContent = ''

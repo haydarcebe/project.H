@@ -19,11 +19,13 @@ h1 {
 }
 
 .game {
+  flex: 1;
   width: min(100%, 760px);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
+  
 }
 
 #oldinterface,
@@ -65,27 +67,32 @@ h1 {
 
 #Ready,
 .answer {
-  max-width: 100%;
-  padding: 10px 16px;
+  max-width: 50%;
+  padding: 10px;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
 #geefantwoorden {
   width: min(100%, 520px);
-  display: grid;
+ display: grid;
   gap: 10px;
+  margin-top: auto;
+margin-bottom: -100px;
+margin-right: -550px;
 }
 
 #geefantwoorden .answer {
-  width: 100%;
-  min-height: 48px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid #284c67;
-  border-radius: 8px;
-  overflow-wrap: anywhere;
+ width: 100%;
+box-sizing: border-box;
+min-height:  48px;
+background: rgba(255, 255, 255, 0.88);
+border: 1px solid #284c67;
+border-radius: 8px;
+overflow-wrap: anywhere;
+min-width: 0;
+position: relative;
 }
-
 #geefantwoorden .answer:hover:not(:disabled) {
   color: #005b72;
 }
@@ -268,7 +275,7 @@ filter: blur(10px);
   50% { filter: blur(10px); }
   100% { filter: blur(0); }
 }
-}
+
 .hidingfroggy{
   display: none
 }
