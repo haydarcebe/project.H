@@ -33,7 +33,7 @@ h1 {
   position: static;
   display: block;
   width: min(100%, 520px);
-  max-height: 38vh;
+  max-height:  38vh;
   object-fit: contain;
 }
 
@@ -78,7 +78,7 @@ h1 {
  display: grid;
   gap: 10px;
   margin-top: auto;
-margin-bottom: -100px;
+margin-bottom: -150px;
 margin-right: -550px;
 }
 
@@ -124,7 +124,17 @@ position: relative;
   text-decoration: none;
   opacity: 0.85;
 }
-
+.page-links button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: rgb(4, 40, 245);
+  color: rgb(235, 222, 222);
+  text-decoration: none;
+  opacity: 0.85;
+}
+.page-links button:hover {
+  opacity: 1;
+}
 .page-links a:hover {
   opacity: 1;
 }
@@ -287,4 +297,7 @@ filter: blur(10px);
 }
 .scoreyg{ 
   font-size: 5rem;
+}
+.hide2 {
+    display: none;
 }

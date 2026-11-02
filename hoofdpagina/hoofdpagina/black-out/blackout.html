@@ -12,6 +12,10 @@
         <img id="oldinterface" src="oldinterface.png" alt="The picture used for the Black-Out quiz">
         <img id="cat" src="cat.png" alt="black-out cat picture" class="catblackout">
         <img id="frog" src="frog.png" alt="blackout frog" class="frogblackout">
+        <div class="questionpicture hide" id="questionpicture">
+    <img src="oldinterface.png" alt="Picture for this question">
+    <div class="tiles" id="tiles"></div>
+</div>
         <button id="Ready">READY!!!</button>
         <div id="explosion" class="explosion" aria-hidden="true"></div>
         <p id="question-counter" aria-live="polite"></p>
@@ -25,8 +29,8 @@
         <p id="round-result" aria-live="polite"></p>
     </main>
     <nav class="page-links" aria-label="Page navigation">
-        <a id="home-link" class="hide" href="../index.html">Return to Home</a>
         <a href="../index.html">Return</a>
+        <button id="restart-button" class="hide2">Play again</button>
     </nav>
     <script src="../Score/score.js"></script>
     <script src="blackout.js"></script>

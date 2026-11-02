@@ -5,40 +5,47 @@ const answers = document.querySelector('#geefantwoorden')
 const title = document.querySelector('#titlechange')
 const result = document.querySelector('#round-result')
 const frog = document.querySelector('#removefroggy')
+const frogImage = frog.querySelector('img')   // new
 const questionCounter = document.querySelector('#question-counter')
 const questionText = document.querySelector('#question-text')
-const homeLink = document.querySelector('#home-link')
 const celebration = document.getElementById('final-celebration')
+const restartButton = document.querySelector('#restart-button')
 const answerButtons = answers.querySelectorAll('button')
 const questions = [
     {
         question: 'What animal is in the picture?',
+        image: 'frog.png',  
         answers: ['A: A frog', 'B: A green ball', 'C: A hamster'],
         correctAnswer: 0
     },
     {
-        question: 'What is the frog holding?',
-        answers: ['A: A flower', 'B: A cookie', 'C: A leaf'],
+        question: 'What animal is in the picture?',
+        image: 'cat.png',   
+        answers: ['A: A dog', 'B: A cat', 'C: A Horse'],
         correctAnswer: 1
     },
     {
-        question: 'What color is the frog?',
-        answers: ['A: Green', 'B: Blue', 'C: Orange'],
+        question: 'What animal is in the picture?',
+        image: 'hamster.png',   
+        answers: ['A: hamster', 'B: falcon', 'C: rat'],
         correctAnswer: 0
     },
     {
-    question: 'What is to be seen behind the frog?',
-    answers: ['A: Nature' , 'B: green city' ,'C:greenscreen'],
-    correctAnswer: 0
-    }
+        question: 'What animal is in the picture?',
+        image: 'penguin.png',   
+        answers: ['A: penguin', 'B: bird', 'C: red-panda'],
+        correctAnswer: 0
+    },
+    {
+    question: 'What is shown in the picture?',
+        image: 'oldinterface.png',
+        answers: ['A: Blank browser window', 'B: Grey background ', 'C: Green ball'],
+        correctAnswer: 0
+}
 ]
 let questionIndex = 0
 let startedAt
 let sessionPoints = 0
-
-const froggy = document.querySelector('#removefroggy')
-const antwoordis = document.querySelector('#antwoordis')
-const scoreyg = document.querySelector('#scoreyg')
 
 function showQuestion() {
     const question = questions[questionIndex]
@@ -46,6 +53,11 @@ function showQuestion() {
     questionText.textContent = question.question
     result.textContent = ''
     startedAt = Date.now()
+
+    frogImage.src = question.image         
+    frog.classList.remove('revealing') 
+    void frog.offsetWidth                  
+    frog.classList.add('revealing')         
 
     answerButtons.forEach((button, index) => {
         button.textContent = question.answers[index]
@@ -60,8 +72,7 @@ ready.addEventListener('click', () => {
         ready.remove()
         answers.classList.remove('hide')
         frog.classList.remove('hidingfroggy')
-        frog.classList.add('revealing')
-        showQuestion()
+        showQuestion()   
     }
 
     explosion.style.left = `${buttonBounds.left + buttonBounds.width / 2}px`
@@ -72,34 +83,6 @@ ready.addEventListener('click', () => {
         startRound()
     }, { once: true })
     explosion.classList.add('playing')
-})
-
-const change = document.querySelector('#titlechange')
-const A = document.querySelector('#antwoordA')
-const B = document.querySelector('#antwoordB')
-const C = document.querySelector('#antwoordC')
-
-A.addEventListener('click', () => {
-    geven.classList.add('hide')
-    changetitle.innerHTML = 'EINDRESULTAAT'
-    antwoordis.innerHTML = 'GOED'
-    antwoordis.style.color = 'green'
-    scoreyg.innerHTML = 'score: ???'
-})
-B.addEventListener('click', () => {
-    geven.classList.add('hide')
-    changetitle.innerHTML = 'EINDRESULTAAT'
-    antwoordis.innerHTML = 'FOUT'
-    antwoordis.style.color = 'red'
-    scoreyg.innerHTML = 'score: 0'
-})
-C.addEventListener('click', () => {
-    geven.classList.add('hide')
-    changetitle.innerHTML = 'EINDRESULTAAT'
-    antwoordis.innerHTML = 'FOUT'
-    antwoordis.style.color = 'red'
-    scoreyg.innerHTML = 'score: 0'
-})
 })
 
 answerButtons.forEach((button, index) => {
@@ -125,10 +108,14 @@ answerButtons.forEach((button, index) => {
                 title.textContent = 'FINAL SCORE OF BLUR-IN'
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
-                homeLink.classList.remove('hide')
+                restartButton.classList.remove('hide2')
                 celebration.src = '../zyzz.gif'
                 celebration.classList.add('visible')
             }
         }, 800)
     })
+})
+
+restartButton.addEventListener('click', () => {
+    location.reload()
 })

@@ -85,6 +85,7 @@ h1 {
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -97,7 +98,20 @@ h1 {
   opacity: 0.85;
 }
 
+.page-links button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: rgb(4, 40, 245);
+  color: rgb(235, 222, 222);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
 .page-links a:hover {
+  opacity: 1;
+}
+
+.page-links button:hover {
   opacity: 1;
 }
 
@@ -109,31 +123,31 @@ h1 {
   #oldinterface {
     max-height: 30vh;
   }
-
 }
-.card1:hover{
+
+.card1:hover {
   animation: colors 0.3s infinite;
 }
+
 @keyframes colors {
-  10%{color: greenyellow}
-  20%{color:darkcyan}
-  35%{color:rgb(7, 251, 255)}
-  45%{color: lawngreen}
- 50%{color:mediumspringgreen}
- 75%{color:crimson}
- 85%{color:blueviolet}
+  10% { color: greenyellow }
+  20% { color: darkcyan }
+  35% { color: rgb(7, 251, 255) }
+  45% { color: lawngreen }
+  50% { color: mediumspringgreen }
+  75% { color: crimson }
+  85% { color: blueviolet }
 }
-img{
-  display:flex;
+
+img {
+  display: flex;
   justify-content: center;
   position: absolute;
   right: 27%;
-  width:45%;
+  width: 45%;
 }
-.hide{
-  display: none;
-}
-.explosion{
+
+.explosion {
   display: none;
   position: fixed;
   z-index: 20;
@@ -145,11 +159,13 @@ img{
   background-position: 0 0;
   pointer-events: none;
 }
-.explosion.playing{
+
+.explosion.playing {
   display: block;
   animation: explosion-frames 1.7s steps(16, end) forwards;
 }
-#final-celebration{
+
+#final-celebration {
   display: none;
   position: fixed;
   top: 50%;
@@ -162,22 +178,25 @@ img{
   z-index: 30;
   pointer-events: none;
 }
-#final-celebration.visible{
+
+#final-celebration.visible {
   display: block;
 }
-@keyframes explosion-frames{
-  to{background-position: 100% 0}
+
+@keyframes explosion-frames {
+  to { background-position: 100% 0 }
 }
-.antwoord1{ 
+
+.antwoord1 {
   position: absolute;
   max-width: 100%;
   bottom: 80%;
   right: 50%;
   font-size: 4rem;
   background: none;
-  
 }
-.antwoord2{ 
+
+.antwoord2 {
   position: absolute;
   max-width: 100%;
   bottom: 50%;
@@ -185,48 +204,86 @@ img{
   font-size: 4rem;
   background: none;
 }
-.antwoord3{ 
+
+.antwoord3 {
   position: absolute;
   max-width: 100%;
   bottom: 20%;
-  right: 50%; 
+  right: 50%;
   font-size: 4rem;
   background: none;
 }
-.antwoord1:hover{
-animation: changingnow 0.9s infinite;
+
+.antwoord1:hover {
+  animation: changingnow 0.9s infinite;
 }
-@keyframes changingnow{
- 50%{color:aqua}
+
+@keyframes changingnow {
+  50% { color: aqua }
 }
-.antwoord2:hover{
-animation: changingnow 0.9s infinite;
+
+.antwoord2:hover {
+  animation: changingnow 0.9s infinite;
 }
-.antwoord3:hover{
-animation: changingnow 0.9s infinite;
-  .page-links {
-    flex-wrap: wrap;
-  }
+
+.antwoord3:hover {
+  animation: changingnow 0.9s infinite;
 }
-.catblackout{
+
+.catblackout {
   opacity: 0;
-  animation: catopacity 5s ease forwards; 
+  animation: catopacity 15s ease forwards;
   width: 15%;
-
-}
-@keyframes catopacity{
-  from{opacity: 0}
-  to{opacity: 1;}
 }
 
-.frogblackout{
+@keyframes catopacity {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.frogblackout {
   opacity: 0;
-  animation: frogtopacity 15s ease forwards; 
+  animation: frogtopacity 15s ease forwards;
   width: 15%;
   left: 15%;
-
 }
-@keyframes frogtopacity{
-  from{opacity: 0}
-  to{opacity: 1;}
+
+@keyframes frogtopacity {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.hide2 {
+  display: none;
+}
+
+.questionpicture {
+  position: relative;
+  width: min(100%, 300px);
+}
+
+.questionpicture img {
+  position: static;
+  display: block;
+  right: auto;
+  width: 100%;
+  height: auto;
+}
+
+.tiles {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  pointer-events: none;
+}
+
+.tile {
+  background: black;
+  transition: opacity 0.4s;
+}
+
+.tile.gone {
+  opacity: 0;
 }
