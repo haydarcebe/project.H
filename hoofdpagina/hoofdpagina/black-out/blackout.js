@@ -7,13 +7,13 @@ const picture = document.querySelector('#questionpicture')
 const pictureImage = picture.querySelector('img')
 const tiles = document.querySelector('#tiles')
 const answers = document.querySelector('#geefantwoorden')
-const title = document.querySelector('#titlechange')
 const result = document.querySelector('#round-result')
 const questionCounter = document.querySelector('#question-counter')
 const questionText = document.querySelector('#question-text')
 const celebration = document.getElementById('final-celebration')
 const restartButton = document.querySelector('#restart-button')
 const answerButtons = answers.querySelectorAll('button')
+const titleremoveblack = document.querySelector('#removeblacktitleremove')
 const questions = [
     {
         question: 'What is shown in the picture?',
@@ -103,10 +103,8 @@ ready.addEventListener('click', () => {
     ready.disabled = true
     explosion.addEventListener('animationend', () => {
         explosion.classList.remove('playing')
-        image.remove()
         ready.remove()
-        cat.remove()
-        frog.remove()
+         titleremoveblack.remove()
         answers.classList.remove('hide')
         showQuestion()
     }, { once: true })
@@ -134,7 +132,6 @@ answerButtons.forEach((button, index) => {
             } else {
                 picture.classList.add('hide')
                 answers.classList.add('hide')
-                title.textContent = 'FINAL SCORE OF BLACK-OUT'
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
                 restartButton.classList.remove('hide2')

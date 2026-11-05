@@ -5,12 +5,13 @@ const answers = document.querySelector('#geefantwoorden')
 const title = document.querySelector('#titlechange')
 const result = document.querySelector('#round-result')
 const frog = document.querySelector('#removefroggy')
-const frogImage = frog.querySelector('img')   // new
+const frogImage = frog.querySelector('img')   
 const questionCounter = document.querySelector('#question-counter')
 const questionText = document.querySelector('#question-text')
 const celebration = document.getElementById('final-celebration')
 const restartButton = document.querySelector('#restart-button')
 const answerButtons = answers.querySelectorAll('button')
+const titleremoveblur = document.querySelector('#removeblurtitle')
 const questions = [
     {
         question: 'What animal is in the picture?',
@@ -68,7 +69,7 @@ function showQuestion() {
 ready.addEventListener('click', () => {
     const buttonBounds = ready.getBoundingClientRect()
     const startRound = () => {
-        image.remove()
+        titleremoveblur.remove()
         ready.remove()
         answers.classList.remove('hide')
         frog.classList.remove('hidingfroggy')
@@ -105,7 +106,6 @@ answerButtons.forEach((button, index) => {
             } else {
                 frog.classList.add('hidingfroggy')
                 answers.classList.add('hide')
-                title.textContent = 'FINAL SCORE OF BLUR-IN'
                 questionCounter.textContent = ''
                 questionText.textContent = `You earned ${sessionPoints} points in ${questions.length} questions.`
                 restartButton.classList.remove('hide2')
