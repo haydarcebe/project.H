@@ -1,8 +1,5 @@
 const ready = document.querySelector('#Ready')
 const explosion = document.getElementById('explosion')
-const image = document.getElementById('oldinterface')
-const frog = document.querySelector('#frog')
-const cat = document.querySelector('#cat')
 const picture = document.querySelector('#questionpicture')
 const pictureImage = picture.querySelector('img')
 const tiles = document.querySelector('#tiles')
@@ -46,8 +43,8 @@ const questions = [
         correctAnswer: 0
     }
 ]
-const tileCount = 20          
-const tileDelay = 700         
+const tileCount = 20
+const tileDelay = 700
 let questionIndex = 0
 let startedAt
 let sessionPoints = 0
@@ -98,15 +95,19 @@ function showQuestion() {
 
 ready.addEventListener('click', () => {
     const buttonBounds = ready.getBoundingClientRect()
+    const startRound = () => {
+        ready.remove()
+        titleremoveblack.remove()
+        answers.classList.remove('hide')
+        showQuestion()
+    }
+
     explosion.style.left = `${buttonBounds.left + buttonBounds.width / 2}px`
     explosion.style.top = `${buttonBounds.top + buttonBounds.height / 2}px`
     ready.disabled = true
     explosion.addEventListener('animationend', () => {
         explosion.classList.remove('playing')
-        ready.remove()
-         titleremoveblack.remove()
-        answers.classList.remove('hide')
-        showQuestion()
+        startRound()
     }, { once: true })
     explosion.classList.add('playing')
 })
