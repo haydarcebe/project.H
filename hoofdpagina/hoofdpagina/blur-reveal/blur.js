@@ -56,7 +56,7 @@ function showQuestion() {
 ready.addEventListener('click', () => {
     const buttonBounds = ready.getBoundingClientRect()
     const startRound = () => {
-        image.remove()
+       
         ready.remove()
         answers.classList.remove('hide')
         frog.classList.remove('hidingfroggy')

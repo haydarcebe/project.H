@@ -43,9 +43,8 @@ h1 {
 }
 
 @keyframes blackstuff {
-    25% { font-size: 1.5rem; background-color: black; }
-    50% { color: aqua; }
-    100% { color: rgb(247, 247, 35); }
+    50% {background-color:black;color: rgb(247, 247, 35); }
+    
 }
 
 .bluring:hover {
@@ -53,8 +52,8 @@ h1 {
 }
 
 @keyframes bluring {
-    25% { font-size: 1.5rem; filter: blur(6px); }
-    100% { color: rgb(247, 247, 35); }
+    from {  filter: blur(6px); }
+    to { color: rgb(247, 247, 35); }
 }
 
 @media (max-width: 600px) {

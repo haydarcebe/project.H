@@ -41,7 +41,7 @@ if (totalScore && roundList) {
         const round = document.createElement('li')
         const result = score.correct ? 'Goed' : 'Fout'
         const question = score.questionNumber ? ` - Question ${score.questionNumber}` : ''
-        round.textContent = `${score.mode}${question}: ${score.points} punten (${result}) - ${score.playedAt}`
+        round.textContent = `${score.mode}${question}: ${score.points} punten (${result})`
         roundList.appendChild(round)
     })
 
