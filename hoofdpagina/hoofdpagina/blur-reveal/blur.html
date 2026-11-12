@@ -7,16 +7,16 @@
     <title>BLUR</title>
 </head>
 <body>
-    <h1 id="titlechange">BLUR-REVEAL</h1>
+    <h1 id='removeblurtitle' id="titlechange">BLUR-REVEAL</h1>
     <main class="game">
-        
         <div class="frogblur hidingfroggy" id="removefroggy">
-            <img src="frog.png" alt="A frog, initially blurred">
+             <img src="frog.png" alt="A frog, initially blurred">
         </div>
         <button id="Ready">READY!!!</button>
         <div id="explosion" class="explosion" aria-hidden="true"></div>
         <p id="question-counter" aria-live="polite"></p>
         <h2 id="question-text"></h2>
+     
         <div id="geefantwoorden" class="hide">
             <button id="antwoordA" class="answer"></button>
             <button id="antwoordB" class="answer"></button>
@@ -26,8 +26,8 @@
         <p id="round-result" aria-live="polite"></p>
     </main>
     <nav class="page-links" aria-label="Page navigation">
-        <a id="home-link" class="hide" href="../index.html">Return to Home</a>
         <a href="../index.html">Return</a>
+         <button id="restart-button" class="hide2">Play again</button> 
     </nav>
     <script src="../Score/score.js"></script>
     <script src="blur.js"></script>
