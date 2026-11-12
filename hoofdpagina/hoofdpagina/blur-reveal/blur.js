@@ -1,4 +1,4 @@
-   const ready = document.querySelector('#Ready')
+    const ready = document.querySelector('#Ready')
     const explosion = document.getElementById('explosion')
     const image = document.getElementById('oldinterface')
     const answers = document.querySelector('#geefantwoorden')
