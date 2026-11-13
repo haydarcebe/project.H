@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is shown in the picture?",
+    "image": "oldinterface.png",
+    "answers": [
+      "A: Blank browser window",
+      "B: Grey background ",
+      "C: Green ball"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "What animal is in the picture?",
+    "image": "penguin.png",
+    "answers": [
+      "A: Falcon",
+      "B: Penguin",
+      "C: Bird"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What animal is in the picture?",
+    "image": "hamster.png",
+    "answers": [
+      "A: Dog",
+      "B: Cat",
+      "C: Hamster"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Wat is the animal in the picture?",
+    "image": "cat.png",
+    "answers": [
+      "A: Dragon",
+      "B: Cat",
+      "C: Grijze tapijt"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Wat is the animal in the picture?",
+    "image": "frog.png",
+    "answers": [
+      "A: frog",
+      "B: Groene kaas",
+      "C: Green wallpaper "
+    ],
+    "correctAnswer": 0
+  }
+]

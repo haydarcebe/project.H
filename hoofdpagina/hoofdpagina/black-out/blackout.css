@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+ 
 body {
   min-height: 100vh;
   margin: 0;
@@ -13,7 +13,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-
+ 
 h1 {
   margin: 0 0 16px;
  padding: 20%;
@@ -25,7 +25,7 @@ h1 {
 50%{color: white;}
 75%{color: black ;}
 100%{color: white;}
-
+ 
 }
 .game {
   width: min(100%, 760px);
@@ -34,7 +34,7 @@ h1 {
   align-items: center;
   gap: 14px;
 }
-
+ 
 #oldinterface {
   position: static;
   display: block;
@@ -42,25 +42,31 @@ h1 {
   max-height: 38vh;
   object-fit: contain;
 }
-
+ 
 .hide {
   display: none;
 }
-
+ 
 #geefantwoorden.hide {
   display: none;
 }
-
+ 
 #Ready{
     max-width: 50%;
   padding: 0.5%;
   font-size: 1.2rem;
   cursor: pointer;
   margin:   0 22% ;
-  margin-top: -40%; 
+  margin-top: -40%;
 background: transparent;
-
+ 
 }
+ 
+#Ready:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+ 
 .answer {
   max-width: 50%;
   padding: 10px  16px;
@@ -69,13 +75,13 @@ background: transparent;
   margin: 20px;
 margin-left: 25%;
 }
-
+ 
 #geefantwoorden {
   width: min(100%, 520px);
   display: grid;
   gap: 10px;
 }
-
+ 
 #geefantwoorden .answer {
   width: 100%;
   min-height: 48px;
@@ -84,21 +90,21 @@ margin-left: 25%;
   border-radius: 8px;
   overflow-wrap: anywhere;
 }
-
+ 
 #geefantwoorden .answer:hover:not(:disabled) {
   color: #005b72;
 }
-
+ 
 #geefantwoorden .answer:disabled {
   cursor: default;
 }
-
+ 
 #question-counter,
 #question-text,
 #round-result {
   margin: 0;
 }
-
+ 
 .page-links {
   width: min(100%, 760px);
   margin-top: auto;
@@ -108,7 +114,7 @@ margin-left: 25%;
   flex-wrap: wrap;
   gap: 12px;
 }
-
+ 
 .page-links a {
   padding: 12px 18px;
   border-radius: 10px;
@@ -117,7 +123,7 @@ margin-left: 25%;
   text-decoration: none;
   opacity: 0.85;
 }
-
+ 
 .page-links button {
   padding: 12px 18px;
   border-radius: 10px;
@@ -126,29 +132,29 @@ margin-left: 25%;
   text-decoration: none;
   opacity: 0.85;
 }
-
+ 
 .page-links a:hover {
   opacity: 1;
 }
-
+ 
 .page-links button:hover {
   opacity: 1;
 }
-
+ 
 @media (max-width: 480px) {
   body {
     padding: 16px;
   }
-
+ 
   #oldinterface {
     max-height: 30vh;
   }
 }
-
+ 
 .card1:hover {
   animation: colors 0.3s infinite;
 }
-
+ 
 @keyframes colors {
   10% { color: greenyellow }
   20% { color: darkcyan }
@@ -158,7 +164,7 @@ margin-left: 25%;
   75% { color: crimson }
   85% { color: blueviolet }
 }
-
+ 
 img {
   display: flex;
   justify-content: center;
@@ -166,7 +172,7 @@ img {
   right: 27%;
   width: 45%;
 }
-
+ 
 .explosion {
   display: none;
   position: fixed;
@@ -179,12 +185,12 @@ img {
   background-position: 0 0;
   pointer-events: none;
 }
-
+ 
 .explosion.playing {
   display: block;
   animation: explosion-frames 1.7s steps(16, end) forwards;
 }
-
+ 
 #final-celebration {
   display: none;
   position: fixed;
@@ -198,15 +204,15 @@ img {
   z-index: 30;
   pointer-events: none;
 }
-
+ 
 #final-celebration.visible {
   display: block;
 }
-
+ 
 @keyframes explosion-frames {
   to { background-position: 100% 0 }
 }
-
+ 
 .antwoord1 {
   position: absolute;
   max-width: 100%;
@@ -215,7 +221,7 @@ img {
   font-size: 4rem;
   background: none;
 }
-
+ 
 .antwoord2 {
   position: absolute;
   max-width: 100%;
@@ -224,7 +230,7 @@ img {
   font-size: 4rem;
   background: none;
 }
-
+ 
 .antwoord3 {
   position: absolute;
   max-width: 100%;
@@ -233,51 +239,51 @@ img {
   font-size: 4rem;
   background: none;
 }
-
+ 
 .antwoord1:hover {
   animation: changingnow 0.9s infinite;
 }
-
+ 
 @keyframes changingnow {
   50% { color: aqua }
 }
-
+ 
 .antwoord2:hover {
   animation: changingnow 0.9s infinite;
 }
-
+ 
 .antwoord3:hover {
   animation: changingnow 0.9s infinite;
 }
-
-
-
+ 
+ 
+ 
 @keyframes catopacity {
   from { opacity: 0 }
   to { opacity: 1 }
 }
-
+ 
 .frogblackout {
   opacity: 0;
   animation: frogtopacity 15s ease forwards;
   width: 15%;
   left: 15%;
 }
-
+ 
 @keyframes frogtopacity {
   from { opacity: 0 }
   to { opacity: 1 }
 }
-
+ 
 .hide2 {
   display: none;
 }
-
+ 
 .questionpicture {
   position: relative;
   width: min(100%, 300px);
 }
-
+ 
 .questionpicture img {
   position: static;
   display: block;
@@ -285,7 +291,7 @@ img {
   width: 100%;
   height: auto;
 }
-
+ 
 .tiles {
   position: absolute;
   inset: 0;
@@ -294,15 +300,64 @@ img {
   grid-template-rows: repeat(4, 1fr);
   pointer-events: none;
 }
-
+ 
 .tile {
   background: black;
   transition: opacity 0.4s;
 }
-
+ 
 .tile.gone {
   opacity: 0;
 }
 .hidingfroggy{
   display:none;
+}
+ 
+/* ---------- Loading state & foutmelding ---------- */
+ 
+[hidden] {
+  display: none !important;
+}
+ 
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #284c67;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+ 
+.loading p {
+  margin: 0;
+}
+ 
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #cfd8dc;
+  border-top-color: rgb(4, 40, 245);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+ 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+ 
+.load-error {
+  padding: 16px 24px;
+  background: #ffe5e5;
+  border: 2px solid crimson;
+  border-radius: 8px;
+  color: #8b0000;
+  font-size: 1.1rem;
+}
+ 
+.load-error p {
+  margin: 0 0 12px;
 }
