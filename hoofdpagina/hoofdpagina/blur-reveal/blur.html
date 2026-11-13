@@ -7,27 +7,38 @@
     <title>BLUR</title>
 </head>
 <body>
-    <h1 id='removeblurtitle' id="titlechange">BLUR-REVEAL</h1>
+    <h1 id="removeblurtitle">BLUR-REVEAL</h1>
     <main class="game">
         <div class="frogblur hidingfroggy" id="removefroggy">
              <img src="frog.png" alt="A frog, initially blurred">
         </div>
-        <button id="Ready">READY!!!</button>
+        <button id="Ready" disabled>READY!!!</button>
+ 
+        <div id="loading" class="loading" role="status" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Game wordt geladen...</p>
+        </div>
+ 
+        <div id="load-error" class="load-error" role="alert" hidden>
+            <p id="load-error-text"></p>
+            <button id="retry-button">Opnieuw proberen</button>
+        </div>
+ 
         <div id="explosion" class="explosion" aria-hidden="true"></div>
         <p id="question-counter" aria-live="polite"></p>
         <h2 id="question-text"></h2>
-     
+ 
         <div id="geefantwoorden" class="hide">
             <button id="antwoordA" class="answer"></button>
             <button id="antwoordB" class="answer"></button>
             <button id="antwoordC" class="answer"></button>
         </div>
-        <img id="final-celebration" alt="Zyzz dancing">
+        <img id="final-celebration" alt="dancing">
         <p id="round-result" aria-live="polite"></p>
     </main>
     <nav class="page-links" aria-label="Page navigation">
         <a href="../index.html">Return</a>
-         <button id="restart-button" class="hide2">Play again</button> 
+         <button id="restart-button" class="hide2">Play again</button>
     </nav>
     <script src="../Score/score.js"></script>
     <script src="blur.js"></script>

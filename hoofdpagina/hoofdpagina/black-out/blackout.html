@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +9,34 @@
 </head>
 <body>
     <h1 id="removeblacktitleremove">BLACK-OUT</h1>
-   <main class="game">
+    <main class="game">
         <div class="questionpicture hide" id="questionpicture">
             <img src="oldinterface.png" alt="Picture for this question">
-    <div class="tiles" id="tiles"></div>
-</div>
-      <button id="Ready">READY!!!</button>
+            <div class="tiles" id="tiles"></div>
+        </div>
+ 
+        <button id="Ready" disabled>READY!!!</button>
+ 
+        <div id="loading" class="loading" role="status" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Game wordt geladen...</p>
+        </div>
+ 
+        <div id="load-error" class="load-error" role="alert" hidden>
+            <p id="load-error-text"></p>
+            <button id="retry-button">Opnieuw proberen</button>
+        </div>
+ 
         <div id="explosion" class="explosion" aria-hidden="true"></div>
         <p id="question-counter" aria-live="polite"></p>
         <h2 id="question-text"></h2>
-     
+ 
         <div id="geefantwoorden" class="hide">
             <button id="antwoordA" class="answer"></button>
             <button id="antwoordB" class="answer"></button>
             <button id="antwoordC" class="answer"></button>
         </div>
-        <img id="final-celebration" alt="Zyzz dancing">
+        <img id="final-celebration" alt="dancing">
         <p id="round-result" aria-live="polite"></p>
     </main>
     <nav class="page-links" aria-label="Page navigation">
